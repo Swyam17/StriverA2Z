@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr)
+            return false;
+
+        ListNode* point1 = head;
+        ListNode* point2 = head;
+
+        while (point1 != nullptr &&point1 ->next != nullptr) {
+            point2 = point2->next;
+            point1 = point1->next->next;
+
+            if (point2 == point1)
+                return true;
+        }
+
+        return false;
+    }
+};
