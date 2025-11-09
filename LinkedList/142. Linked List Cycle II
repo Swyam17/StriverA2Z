@@ -15,7 +15,6 @@ public:
                 break;
             }
         }
-
         // No cycle
         if (!fast || !fast->next)
             return nullptr;
